@@ -1,0 +1,25 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main  # Déclenche le déploiement lors d'un push sur la branche main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Hostinger via rsync
+        uses: Burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avz --delete
+          path: construct/
+          remote_path: domains/chanatentreprise.org/public_html/
+          remote_host: fr-int-web1514.main-hosting.eu
+          remote_port: 65002
+          remote_user: u581339248
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          args: --exclude '.DS_Store' --exclude '.git/'
