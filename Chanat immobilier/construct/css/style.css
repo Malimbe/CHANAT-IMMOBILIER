@@ -3567,3 +3567,118 @@ textarea {
 		margin-bottom: 24px;
 	}
 }
+/* ==========================================================================
+   Correction de la Réactivité Tablette et Mobile
+   ========================================================================== */
+
+/* Empêche le défilement horizontal global */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+@media all and (max-width: 991px) {
+    .x-large-heading {
+        font-size: 60px;
+        line-height: 60px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    /* Ajustement des titres principaux */
+    .x-large-heading {
+        font-size: 38px !important;
+        line-height: 42px !important;
+        margin-bottom: 15px;
+    }
+    
+    .x-large-heading small {
+        font-size: 18px !important;
+        line-height: 24px !important;
+        margin-bottom: 5px;
+    }
+    
+    .big-heading {
+        font-size: 24px !important;
+        line-height: 32px !important;
+        padding-left: 15px !important;
+        margin-bottom: 30px !important;
+    }
+    
+    .big-heading small {
+        font-size: 14px !important;
+        line-height: 20px !important;
+    }
+
+    /* Correction des onglets de services qui débordent */
+    .section-tabs .nav-tabs {
+        display: block !important;
+        border-bottom: none;
+    }
+    
+    .section-tabs .nav-tabs > li {
+        width: 100%;
+        float: none;
+        border-right: none !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .section-tabs .nav-tabs > li > a {
+        padding: 15px 20px !important;
+        line-height: 24px !important;
+        text-align: center;
+    }
+    
+    .nav-tabs > li > a:after {
+        display: none !important; /* Enlever la flèche qui dépasse sur mobile */
+    }
+    
+    .section-tabs .nav-tabs > li > a:before {
+        display: none; /* Cache les petits tirets de séparation */
+    }
+
+    /* Espacement des sections sur mobile */
+    .section.large {
+        padding: 60px 0 !important;
+    }
+    
+    .section-tabs .tab-content {
+        padding-top: 40px !important;
+    }
+
+    /* Header Top correction */
+    .header .top {
+        padding: 10px 0;
+        height: auto !important;
+    }
+    
+    .header .top span {
+        display: block;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    
+    .header .top .links {
+        text-align: center;
+        float: none !important;
+    }
+    
+    .header .top .links a {
+        display: inline-block;
+        margin: 5px 10px !important;
+    }
+    
+    /* Image fixes */
+    .img-responsive.pull-right {
+        float: none !important;
+        margin: 20px auto !important;
+        display: block;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .x-large-heading {
+        font-size: 32px !important;
+        line-height: 36px !important;
+    }
+}
