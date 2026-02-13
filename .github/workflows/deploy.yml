@@ -16,7 +16,7 @@ jobs:
         uses: Burnett01/rsync-deployments@7.0.1
         with:
           switches: -avz --delete
-          path: construct/
+          path: Chanat immobilier/construct/
           remote_path: domains/chanatentreprise.org/public_html/
           remote_host: fr-int-web1514.main-hosting.eu
           remote_port: 65002
