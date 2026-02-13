@@ -1013,11 +1013,11 @@ textarea {
 	background: none;
 	border: none;
 	opacity: 1;
-	color: #2960ab;
+	color: #bbbbbb;
 }
 
 .nav-tabs>li.active>a:before {
-	background: #2960ab;
+	background: #bbbbbb;
 }
 
 .nav-tabs>li.active>a:after {
